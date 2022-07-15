@@ -16,9 +16,11 @@ for cyr, lat in zip(CYRILLIC_SYMBOLS, TRANSLATION):
     TRANS[ord(cyr)] = lat
     TRANS[ord(cyr.upper())] = lat.upper()
 
+
 def normalize(name: str) -> str:
     t_name = name.translate(TRANS)
     t_name = re.sub(r"\W", "_", t_name)
     return t_name
 
-# print(normalize('Добрий день everybody'))
+
+print(normalize('Добрий день everybody'))
