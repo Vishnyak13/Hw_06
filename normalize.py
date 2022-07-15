@@ -21,6 +21,3 @@ def normalize(name: str) -> str:
     t_name = name.translate(TRANS)
     t_name = re.sub(r"\W", "_", t_name)
     return t_name
-
-
-print(normalize('Добрий день everybody'))
